@@ -5,11 +5,13 @@ import { Pages } from "./pages/Pages";
 import Data from "./components/Data";
 import { useState } from "react";
 import { Cart } from "./common/Cart/Cart";
+import Sdata from "./components/shop/Sdata";
 
 function App() {
   
   const { productItems } = Data;
-  const { shopItems } = Data;
+  
+  const {shopItems} = Sdata;
 
   const [cartItem, setCartItem] = useState([]);
 
@@ -56,7 +58,7 @@ function App() {
           <Route
             path="/"
             element={
-              <Pages productItems={productItems} addToCart={addToCart} />
+              <Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems}/>
             }
           ></Route>
           <Route
