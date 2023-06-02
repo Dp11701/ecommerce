@@ -6,6 +6,7 @@ import Data from "./components/Data";
 import { useState } from "react";
 import { Cart } from "./common/Cart/Cart";
 import Sdata from "./components/shop/Sdata";
+import { Footer } from "./common/Footer/Footer";
 
 function App() {
   
@@ -66,6 +67,7 @@ function App() {
             element={<Cart cartItem={cartItem} addToCart={addToCart}  decreaseQty={decreaseQty} />}
           />
         </Routes>
+        <Footer/>
       </Router>
     </div>
   );

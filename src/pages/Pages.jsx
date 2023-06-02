@@ -6,7 +6,7 @@ import { NewArrivals } from '../components/newarrivals/NewArrivals'
 import { Discount } from '../components/discount/Discount'
 import { Shop } from '../components/shop/Shop'
 
-export const Pages = ({productItems, cartItem, addToCart}) => {
+export const Pages = ({productItems, cartItem, addToCart, shopItems}) => {
   return (
     <div>
         <Home cartItem={cartItem}/>
@@ -14,7 +14,7 @@ export const Pages = ({productItems, cartItem, addToCart}) => {
         <TopCate/>
         <NewArrivals/>
         <Discount/>
-        <Shop/>
+        <Shop shopItems={shopItems} addToCart={addToCart}/>
     </div>
   )
 }
